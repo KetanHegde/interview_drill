@@ -25,7 +25,7 @@ A modern full-stack web application with authentication features including Googl
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/KetanHegde/interview_drill.git
 cd upivot-project
 ```
 
