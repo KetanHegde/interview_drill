@@ -75,7 +75,7 @@ NEXT_PUBLIC_API_BASE_URL=http://localhost:4000
 - Health check:
 
 ```bash
-curl http://localhost:4000/health
+curl http://localhost:4000/api/health
 ```
 
 ## 🚀 Performance Testing with k6
