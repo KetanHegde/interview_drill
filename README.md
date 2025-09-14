@@ -4,21 +4,21 @@ A modern full-stack web application with authentication features including Googl
 
 ## 📋 Table of Contents
 
-* [Quick Start](#quick-start)
-* [OAuth Setup](#oauth-setup)
-* [Environment Variables](#environment-variables)
-* [Test Commands](#test-commands)
-* [Performance Testing with k6](#performance-testing-with-k6)
-* [Tech Stack](#tech-stack)
+- [Quick Start](#quick-start)
+- [OAuth Setup](#oauth-setup)
+- [Environment Variables](#environment-variables)
+- [Test Commands](#test-commands)
+- [Performance Testing with k6](#performance-testing-with-k6)
+- [Tech Stack](#tech-stack)
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-* Docker & Docker Compose
-* Git
-* Google OAuth credentials
-* k6 (optional, for performance testing)
+- Docker & Docker Compose
+- Git
+- Google OAuth credentials
+- k6 (optional, for performance testing)
 
 ### Setup
 
@@ -26,7 +26,7 @@ A modern full-stack web application with authentication features including Googl
 
 ```bash
 git clone https://github.com/KetanHegde/interview_drill.git
-cd upivot-project
+cd interview_drill
 ```
 
 2. Create a `.env` file in the root directory (see [Environment Variables](#environment-variables)).
@@ -39,8 +39,8 @@ docker-compose up --build
 
 4. Access the application:
 
-* Full Application: [http://localhost:4000](http://localhost:4000)
-* MongoDB: `mongodb://localhost:27017/upivot`
+- Full Application: [http://localhost:4000](http://localhost:4000)
+- MongoDB: `mongodb://localhost:27017/upivot`
 
 ## 🔐 OAuth Setup
 
@@ -48,8 +48,9 @@ docker-compose up --build
 2. Enable Google+ API and create OAuth credentials (Web application).
 3. Set:
 
-   * **Authorized JavaScript origins:** `http://localhost:4000`
-   * **Authorized redirect URIs:** `http://localhost:4000/auth/google/callback`
+   - **Authorized JavaScript origins:** `http://localhost:4000`
+   - **Authorized redirect URIs:** `http://localhost:4000/auth/google/callback`
+
 4. Add **Client ID** and **Client Secret** to your `.env` file.
 
 ## 🔧 Environment Variables
@@ -71,7 +72,7 @@ NEXT_PUBLIC_API_BASE_URL=http://localhost:4000
 
 ## 🧪 Test Commands
 
-* Health check:
+- Health check:
 
 ```bash
 curl http://localhost:4000/health
@@ -87,24 +88,27 @@ Run performance tests (make sure to replace the drill ID in the script):
 k6 run k6/script.js
 ```
 
+Tested Image
+![k6_testing](docs/k6_testing.jpg)
+
 ## 📚 Tech Stack
 
 ### Backend
 
-* Node.js, Express.js, MongoDB, Passport.js, JWT
+- Node.js, Express.js, MongoDB, Passport.js, JWT
 
 ### Frontend
 
-* React, Next.js, Vite, Axios, Tailwind CSS
+- React, Next.js, Vite, Axios, Tailwind CSS
 
 ### Infrastructure
 
-* Docker & Docker Compose, MongoDB containerized, Single port configuration
+- Docker & Docker Compose, MongoDB containerized, Single port configuration
 
 ### Testing
 
-* k6 for performance, cURL for API testing
+- k6 for performance, cURL for API testing
 
 ### OAuth Integration
 
-* Google OAuth 2.0 (Authorization Code Flow)
+- Google OAuth 2.0 (Authorization Code Flow)
