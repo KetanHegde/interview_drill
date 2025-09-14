@@ -1,0 +1,40 @@
+services:
+  # Backend API service
+  api:
+    build:
+      context: . # Project root
+      dockerfile: ./api/Dockerfile
+    container_name: upivot_api
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=production
+      - MONGO_URI=mongodb://mongo:27017/upivot
+    depends_on:
+      - mongo
+    networks:
+      - upivot_network
+    command: npm run start
+
+  # MongoDB service
+  mongo:
+    image: mongo:latest
+    container_name: upivot_mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+      - ./api/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    environment:
+      - MONGO_INITDB_DATABASE=upivot
+    networks:
+      - upivot_network
+
+volumes:
+  mongo_data:
+
+networks:
+  upivot_network:
+    driver: bridge
