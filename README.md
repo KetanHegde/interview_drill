@@ -78,6 +78,10 @@ NEXT_PUBLIC_API_BASE_URL=http://localhost:4000
 curl http://localhost:4000/api/health
 ```
 
+## 🎥 Demo Video
+[![Watch the demo](images/demo.jpg)](https://www.loom.com/share/0ca5af6b916947bd9b6a7e3bb5ef9557?sid=1f085f88-bfd5-46a9-adc2-212d7d3b6cab)
+
+
 ## 🚀 Performance Testing with k6
 
 Run performance tests (make sure to replace the drill ID in the script):
@@ -89,7 +93,10 @@ k6 run k6/script.js
 ```
 
 Tested Image
-![k6_testing](docs/k6_testing.jpg)
+![k6_testing](images/k6_testing.jpg)
+
+## 🎥 K6 testing Video
+[![Watch the testing](images/k6_testing_demo.jpg)](https://www.loom.com/share/bc7e59d413d749949340a628303cbb05?sid=fa7aec10-32e8-41ef-b524-6cf6f31b5cd0)
 
 ## 📚 Tech Stack
 
