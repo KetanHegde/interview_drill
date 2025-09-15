@@ -29,7 +29,7 @@ git clone https://github.com/KetanHegde/interview_drill.git
 cd interview_drill
 ```
 
-2. Create a `.env` file in the root directory (see [Environment Variables](#environment-variables)).
+2. Create a `.env` file in the api directory (see [Environment Variables](#environment-variables)).
 
 3. Build and start the application:
 
